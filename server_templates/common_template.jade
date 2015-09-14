@@ -1,0 +1,37 @@
+doctype html
+
+html
+  head
+    title Demo on node
+    meta(charset='utf-8')
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css")
+    link(rel='stylesheet' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    link(rel="stylesheet" href="/css/format.css")
+
+  body
+    script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js')
+    script(type='text/javascript' src='http://code.jquery.com/ui/1.10.3/jquery-ui.js')
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js")
+    script(type='text/javascript' src='/socket.io/socket.io.js')
+    script(type='text/javascript' src='/js/client_io.js')
+
+    block append_script
+
+    .container
+      .row
+        .col-xs-12.col-md-12
+
+          h2 Welcome!
+
+          p Press Tab To Select
+
+          div(class='fill')
+            ul(class='nav nav-tabs' role='tablist')
+              li(class='#{chat_active} links')
+                a(href='/')
+                  h5 Chat
+              li(class='#{stats_active} links')
+                a(href='/stats')
+                  h5 Stats
+
+            block append_body

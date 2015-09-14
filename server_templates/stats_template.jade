@@ -1,0 +1,52 @@
+extends common_template
+
+block append_script
+  script(type='text/javascript' src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}")
+
+block append_body
+
+  h4 Select values
+
+
+  div(class='row')
+
+    div(class='col-md-4 col-xs-4')
+      div(class='panel panel-default')
+        div(class='panel-heading')
+          div(class='panel-body')
+            div(class='row')
+              div(class='col-md-8 col-xs-8')
+                .form-group
+                  label(for='teamName')
+                    h5 Select Team
+                  select(class='form-control' id='teamName')
+                    option PSEM
+                    option PSI
+                    option MEDIA SERVICES
+                    option IPLAYER
+            div(class='row')
+              div(class='col-md-8 col-xs-8')
+                h5 Date To
+                div(class='form-group')
+                  div(class='input-group date')
+                    input(type='text' class='form-control' id='datePickerTo')
+                    span(class='input-group-addon')
+                      span(class='glyphicon glyphicon-calendar')
+            div(class='row')
+              div(class='col-md-8 col-xs-8')
+                h5 Date From
+                div(class='form-group')
+                  div(class='input-group date')
+                    input(type='text' class='form-control' id='datePickerFrom')
+                    span(class='input-group-addon')
+                      span(class='glyphicon glyphicon-calendar')
+            div(class='row')
+              div(class='col-md-8 col-xs-8')
+                button(id='submitDateTeamButton' type='submit' class='btn btn-primary') Submit
+
+    div(class='col-md-8 col-xs-8' )
+      div(class='col-md-12 col-xs-12')
+        div(class='panel panel-default')
+          div(class='panel-heading') Graph
+            div(class='panel-body')
+              div( style="width: 660px; height: 500px;" id='piechart')

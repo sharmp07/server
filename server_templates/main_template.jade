@@ -1,0 +1,21 @@
+extends common_template
+
+block append_body
+
+  div(class='row' id='userName')
+    div(class='col-md-1 col-xs-1')
+      h4 User :
+    div(class='col-md-1 col-xs-1' id='nameTag')
+      h4 #{name}
+
+  div(class='panel panel-default' id='chatLogs')
+    div(id='tail'  class='panel-body')
+      p Chat logs
+
+  div(id='margin')
+
+  div(class='row' id='div2')
+    div(class='col-md-7 col-xs-7')
+      input(class='form-control' id='inputBox' type='text' placeholder='Type here...')
+    div(class='col-md-5 col-xs-5')
+      button(id='sendButton' type='submit' class='btn btn-primary') Send Message
