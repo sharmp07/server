@@ -1,4 +1,9 @@
-{
+{  
+  "name" : "PawanServer",
+  "version" : "1.1",
+  "description" : "A practise server",
+  "main" : "server.js",
+
   "dependencies": {
     "async": "^1.4.2",
     "express": "^4.13.3",
